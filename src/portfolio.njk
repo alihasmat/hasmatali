@@ -1,0 +1,158 @@
+---
+title: Portfolio
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Googel Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@400;500;700&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div class="main-border"></div>
+    <div class="container">
+      <header class="header">
+        <div>
+          <button class="nav-toggle" aria-label="toggle navigation">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="18"
+                height="3"
+                fill="black"
+                fill-opacity="0.3"
+                class="first"
+              />
+              <rect
+                y="7.5"
+                width="12"
+                height="3"
+                fill="black"
+                fill-opacity="0.3"
+                class="second"
+              />
+              <rect
+                y="15"
+                width="18"
+                height="3"
+                fill="black"
+                fill-opacity="0.3"
+                class="third"
+              />
+            </svg>
+          </button>
+          <nav class="nav nav-darkbrown main-container">
+            <ul class="nav__list" role="list">
+              <li><a class="hover-effect__portfolio" href="/">Home</a></li>
+              <li>
+                <a class="hover-effect__portfolio" href="/portfolio"
+                  >Portfolio</a
+                >
+              </li>
+              <li><a href="/blog" class="hover-effect__portfolio">Blog</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="portfolio-container">
+        <img
+          src="/images/portfolio.svg"
+          alt="portfolio"
+          class="portfolio-logo"
+        />
+        <div class="portfolio">
+          <a href="https://tnt-av5.pages.dev/" target="_blank"
+            ><img class="box-shadow" src="/images/img2.jpg" alt="tnt image"
+          /></a>
+          <div class="portfolio__info">
+            <p>
+              The TNT is a company based in Kuwait. It is still in development
+              phase.
+            </p>
+            <p>
+              Website link
+              <a href="https://tnt-av5.pages.dev/" target="_blank"
+                >Click here.</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio">
+          <a
+            class="portfolio__order1"
+            href="https://2725efeb.fm-social-db.pages.dev/"
+            target="_blank"
+            ><img
+              class="box-shadow"
+              src="/images/img3.jpg"
+              alt="dashboard image"
+          /></a>
+          <div class="portfolio__info portfolio__order2">
+            <p>
+              The Social Media Dasboard is a frontend mentor challenge. I
+              completed the challenge.
+            </p>
+            <p>
+              Website link
+              <a href="https://2725efeb.fm-social-db.pages.dev/" target="_blank"
+                >Click here.</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio">
+          <a href="https://landing-page-manage.pages.dev" target="_blank"
+            ><img
+              class="box-shadow"
+              src="/images/img4.jpg"
+              alt="landing page image"
+          /></a>
+          <div class="portfolio__info">
+            <p>
+              The Landing Page Manage is a frontend mentor challenge. I
+              completed the challenge.
+            </p>
+            <p>
+              Website link
+              <a href="https://landing-page-manage.pages.dev" target="_blank"
+                >Click here.</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--content-->
+
+      <footer class="footer">
+        <div class="flex portfolio-container">
+          {% include 'social.njk' %} {% include 'pagination.njk' %}
+          <div class="copyright">
+            <p>© Hasmat Ali {% year %}. <span>All rights reserved.</span></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- container -->
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

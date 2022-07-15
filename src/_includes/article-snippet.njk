@@ -1,0 +1,17 @@
+<article class="article-recent">
+  <div class="article-recent-main">
+    <h2 class="article__heading">{{ post.data.title }}</h2>
+    <p class="article__body">
+      {{ post.data.description }}
+    </p>
+    <a class="article__read-more" href="{{ post.url }}">Continue Reading</a>
+  </div>
+  <div class="article-recent-sub">
+    <img
+      class="article__image box-shadow"
+      src="{{ post.data.image }}"
+      alt="{{ post.data.imageAlt }}"
+    />
+    <p class="article__info">{{ post.date | postDate }}</p>
+  </div>
+</article>

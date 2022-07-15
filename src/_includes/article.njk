@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Googel Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@400;500;700&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Article</title>
+  </head>
+  <body>
+    <div class="main-border"></div>
+    <div class="container">
+      {% include 'header-blog.njk' %}
+
+      <main class="blog-container">
+        <article class="article-content article-margin">
+          <h2 class="article__heading">{{ title }}</h2>
+          <img
+            class="article__image box-shadow"
+            src="{{ image }}"
+            alt="{{ imageAlt }}"
+          />
+          <!-- <p class="article__info">{{ date }}</p> -->
+
+          {{ content | safe }}
+
+          <!-- <p class="article__body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            faucibus velit urna. Ut dolor sapien, scelerisque in posuere non,
+            efficitur et ex. Duis massa turpis, varius et erat at, tempor varius
+            nisl.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            faucibus velit urna. Ut dolor sapien, scelerisque in posuere non,
+            efficitur et ex. Duis massa turpis, varius et erat at, tempor varius
+            nisl. Mauris nisl dolor, suscipit ut odio sed, ullamcorper pretium
+            lacus. Ut id sem justo. Vivamus vel nunc cursus, molestie tortor in,
+            interdum sapien. Vestibulum vitae vestibulum lorem. Sed vitae nunc
+            nulla. Suspendisse egestas convallis faucibus. Quisque lacinia velit
+            nec ante tempus interdum. Praesent a interdum libero. Integer ornare
+            felis a turpis suscipit vehicula. Cras sem nibh, tristique a
+            suscipit id, iaculis sit amet nisl.
+          </p> -->
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="flex portfolio-container">
+          {% include 'social.njk' %} {% include 'pagination.njk' %}
+          <div class="copyright">
+            <p>© Hasmat Ali {% year %}. <span>All rights reserved.</span></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- container -->
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
