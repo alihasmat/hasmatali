@@ -624,14 +624,6 @@ h2 {
   .article-recent .article__body {
     width: 35ch;
   }
-
-  .article-content > p {
-    margin-bottom: 1.2rem;
-  }
-
-  .article-content > p > strong {
-    font-weight: var(--fw-bold);
-  }
 }
 
 /* Article Content */
@@ -646,4 +638,12 @@ h2 {
 .article-code-image {
   max-width: 50%;
   margin: 0 auto;
+}
+
+.article-content > p {
+  margin-bottom: 1.2rem;
+}
+
+.article-content > p > strong {
+  font-weight: var(--fw-bold);
 }
