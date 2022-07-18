@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
 
@@ -29,29 +29,9 @@
             src="{{ image }}"
             alt="{{ imageAlt }}"
           />
-          <!-- <p class="article__info">{{ date }}</p> -->
+          <p class="article__info">{{ page.date | postDate }}</p>
 
           {{ content | safe }}
-
-          <!-- <p class="article__body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            faucibus velit urna. Ut dolor sapien, scelerisque in posuere non,
-            efficitur et ex. Duis massa turpis, varius et erat at, tempor varius
-            nisl.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            faucibus velit urna. Ut dolor sapien, scelerisque in posuere non,
-            efficitur et ex. Duis massa turpis, varius et erat at, tempor varius
-            nisl. Mauris nisl dolor, suscipit ut odio sed, ullamcorper pretium
-            lacus. Ut id sem justo. Vivamus vel nunc cursus, molestie tortor in,
-            interdum sapien. Vestibulum vitae vestibulum lorem. Sed vitae nunc
-            nulla. Suspendisse egestas convallis faucibus. Quisque lacinia velit
-            nec ante tempus interdum. Praesent a interdum libero. Integer ornare
-            felis a turpis suscipit vehicula. Cras sem nibh, tristique a
-            suscipit id, iaculis sit amet nisl.
-          </p> -->
         </article>
       </main>
 

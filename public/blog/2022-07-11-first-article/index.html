@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
 
@@ -73,40 +73,42 @@
 
       <main class="blog-container">
         <article class="article-content article-margin">
-          <h2 class="article__heading">My First Article</h2>
+          <h2 class="article__heading">Getting started with Web Accessibility</h2>
           <img
             class="article__image box-shadow"
-            src="/images/coding-man.png"
-            alt="This is a test"
+            src="/images/accessibility.jpg"
+            alt="web accessibility"
           />
-          <!-- <p class="article__info"></p> -->
+          <p class="article__info">Jul 11, 2022</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel. Donec ultrices tincidunt arcu non sodales. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Pretium quam vulputate dignissim suspendisse in est. Lobortis mattis aliquam faucibus purus in massa tempor nec. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Vulputate eu scelerisque felis imperdiet proin. Nisl nisi scelerisque eu ultrices.</p>
-<p>Enim nulla aliquet porttitor lacus luctus accumsan. Vulputate mi sit amet mauris commodo quis. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Placerat orci nulla pellentesque dignissim. Consequat mauris nunc congue nisi. Nec nam aliquam sem et tortor consequat. Consequat semper viverra nam libero justo laoreet sit amet. Id interdum velit laoreet id donec. Turpis in eu mi bibendum neque. Tincidunt vitae semper quis lectus. Suscipit adipiscing bibendum est ultricies integer quis auctor. Posuere urna nec tincidunt praesent semper. Sagittis id consectetur purus ut faucibus pulvinar elementum. Diam maecenas ultricies mi eget mauris. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Dui sapien eget mi proin sed.</p>
-<p>In iaculis nunc sed augue lacus. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Consectetur adipiscing elit ut aliquam. Tortor consequat id porta nibh venenatis cras sed. Integer enim neque volutpat ac tincidunt. Pellentesque pulvinar pellentesque habitant morbi. Ut enim blandit volutpat maecenas. Risus quis varius quam quisque id. Turpis tincidunt id aliquet risus. Congue eu consequat ac felis donec.</p>
-<p>Aliquam vestibulum morbi blandit cursus risus at. Malesuada fames ac turpis egestas sed tempus. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Enim diam vulputate ut pharetra sit amet aliquam. Est ante in nibh mauris cursus mattis. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Nec ultrices dui sapien eget mi proin sed libero enim. Sed sed risus pretium quam vulputate. Sit amet luctus venenatis lectus magna.</p>
-<p>Mauris nunc congue nisi vitae suscipit tellus mauris. Vitae et leo duis ut. Arcu cursus euismod quis viverra nibh. Amet mauris commodo quis imperdiet. Condimentum lacinia quis vel eros donec. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Faucibus nisl tincidunt eget nullam. Cursus metus aliquam eleifend mi in nulla. Ut placerat orci nulla pellentesque dignissim enim sit amet. Lobortis feugiat vivamus at augue eget arcu dictum. Nunc faucibus a pellentesque sit amet porttitor. Quis varius quam quisque id diam vel quam elementum pulvinar.</p>
+          <p>Accessibility in web development is really an important concept but it seems really to be a big topic and becomes little bit harder to get into when you are first into it. Just think about people who are visually impaired like color blindness, screen readers and people who uses keyboards only.</p>
+<p>In terms of statistics, the World Health Organization estimates that &quot;285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 million have low vision.&quot;</p>
+<p><strong>Best practices to solve this problem are listed down below:</strong></p>
+<ul class="article-list" role="list">
+    <li>Always use semantic HTML because it is designed for screen readers.</li>
+    <li>Add alternative text in alt tags while using images.</li>
+    <li>Use subtitles and closed captions in your videos and while using podcast, transcripts are important.</li>
+    <li>Don’t make your text too much dense. Appropriate padding around button is highly encouraged. Make it bigger enough.</li>
+    <li>Auto play videos and websites with loud music must be turned off.</li>
+    <li>Animations can be really harmful to some people. So avoid using animations because it causes nausea and headache.</li>
+</ul>
+<p><strong>What if you didn’t use semantic html?</strong></p>
+<p>This problem can be solved using ARIA labels. ARIA stands for Accessible Reach Internet Application. It is basically a set of rules which can make non semantic elements to semantic elements. For example, you might have used div for your buttons. So in that case you can use aria-label. To understand this more, click the link below below.</p>
+<p>Resource: <a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank">Aria Label</a></p>
+<p><strong>What if you have used a lot of animations in your website?</strong></p>
+<p>This problem can be solved using prefers-reduced-motion. The user of your website has full control to avoid animation in your website. How this works is, every operating system have reduced motion option in your display settings. If it is checked, you can simply add prefers-reduced-motion in your media query as below.</p>
+<p>@media (prefers-reduced-motion: reduce) {
+.wordArtRotation,
+.ranbowWave,
+.textFadeIn {
+animation: none;
+}
+}
+Resource: <a href="https://www.tatianamac.com/" target="_blank">Prefers-Reduced-Motion</a></p>
+<p>Other resources which will help you understand in detail about the accessibility of the website are:</p>
+<p><a href="https://happiful.com/what-is-the-spoon-theory/" target="_blank">Spoon Theory</a> |
+<a href="https://www.a11yproject.com" target="_blank">A11y Project</a></p>
 
-
-          <!-- <p class="article__body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            faucibus velit urna. Ut dolor sapien, scelerisque in posuere non,
-            efficitur et ex. Duis massa turpis, varius et erat at, tempor varius
-            nisl.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            faucibus velit urna. Ut dolor sapien, scelerisque in posuere non,
-            efficitur et ex. Duis massa turpis, varius et erat at, tempor varius
-            nisl. Mauris nisl dolor, suscipit ut odio sed, ullamcorper pretium
-            lacus. Ut id sem justo. Vivamus vel nunc cursus, molestie tortor in,
-            interdum sapien. Vestibulum vitae vestibulum lorem. Sed vitae nunc
-            nulla. Suspendisse egestas convallis faucibus. Quisque lacinia velit
-            nec ante tempus interdum. Praesent a interdum libero. Integer ornare
-            felis a turpis suscipit vehicula. Cras sem nibh, tristique a
-            suscipit id, iaculis sit amet nisl.
-          </p> -->
         </article>
       </main>
 
@@ -171,25 +173,37 @@
   </div>
 
   <div class="social-icon">
-    <a href=""
+    <a href="https://www.linkedin.com/in/hasmat-a-a2631011b/" target="_blank"
       ><svg
-        width="27"
+        width="21"
         height="21"
-        viewBox="0 0 27 21"
+        viewBox="0 0 21 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_73_30)">
+        <g clip-path="url(#clip0_94_24)">
           <path
             class="social-icon-fill-1"
-            d="M23.7043 0H3.29924C2.42452 0.00103611 1.5859 0.380777 0.967374 1.0559C0.348852 1.73103 0.000949238 2.6464 0 3.60117L0 16.4088C0.000949238 17.3636 0.348852 18.279 0.967374 18.9541C1.5859 19.6292 2.42452 20.009 3.29924 20.01H23.7043C24.5791 20.009 25.4177 19.6292 26.0362 18.9541C26.6547 18.279 27.0026 17.3636 27.0036 16.4088V3.60117C27.0026 2.6464 26.6547 1.73103 26.0362 1.0559C25.4177 0.380777 24.5791 0.00103611 23.7043 0V0ZM22.0906 2.34859L13.4839 8.38839L4.90942 2.34859H22.0906ZM23.7043 17.6614H3.29924C2.99489 17.6614 2.703 17.5294 2.48779 17.2945C2.27258 17.0596 2.15168 16.741 2.15168 16.4088V3.66772L12.8384 11.1676L12.8814 11.191L12.928 11.2184C13.0089 11.2651 13.0943 11.3019 13.1826 11.328H13.2113C13.3064 11.3533 13.4039 11.3665 13.5018 11.3672V11.3672C13.5997 11.3667 13.6972 11.3536 13.7923 11.328H13.821C13.9093 11.3018 13.9946 11.2651 14.0756 11.2184L14.1222 11.191L14.1652 11.1676L24.8519 3.66772V16.4088C24.8519 16.741 24.731 17.0596 24.5158 17.2945C24.3006 17.5294 24.0087 17.6614 23.7043 17.6614V17.6614Z"
+            d="M4.66013 6.44055H0.64108C0.462708 6.44055 0.318176 6.58515 0.318176 6.76346V19.6749C0.318176 19.8533 0.462708 19.9978 0.64108 19.9978H4.66013C4.8385 19.9978 4.98303 19.8533 4.98303 19.6749V6.76346C4.98303 6.58515 4.8385 6.44055 4.66013 6.44055Z"
+            fill="black"
+            fill-opacity="0.3"
+          />
+          <path
+            class="social-icon-fill-1"
+            d="M2.65207 0.0219727C1.1897 0.0219727 0 1.21039 0 2.67114C0 4.13253 1.1897 5.3214 2.65207 5.3214C4.11327 5.3214 5.30201 4.13247 5.30201 2.67114C5.30207 1.21039 4.11327 0.0219727 2.65207 0.0219727Z"
+            fill="black"
+            fill-opacity="0.3"
+          />
+          <path
+            class="social-icon-fill-1"
+            d="M14.8829 6.11963C13.2687 6.11963 12.0754 6.81355 11.3517 7.60201V6.76343C11.3517 6.58513 11.2072 6.44053 11.0288 6.44053H7.17984C7.00147 6.44053 6.85693 6.58513 6.85693 6.76343V19.6749C6.85693 19.8533 7.00147 19.9978 7.17984 19.9978H11.1901C11.3685 19.9978 11.513 19.8533 11.513 19.6749V13.2867C11.513 11.1341 12.0977 10.2954 13.5983 10.2954C15.2326 10.2954 15.3625 11.6399 15.3625 13.3975V19.675C15.3625 19.8533 15.507 19.9979 15.6854 19.9979H19.6971C19.8755 19.9979 20.02 19.8533 20.02 19.675V12.5928C20.02 9.39187 19.4097 6.11963 14.8829 6.11963Z"
             fill="black"
             fill-opacity="0.3"
           />
         </g>
         <defs>
-          <clipPath id="clip0_73_30">
-            <rect width="27" height="20.01" fill="white" />
+          <clipPath id="clip0_94_24">
+            <rect width="20.02" height="20.02" fill="white" />
           </clipPath>
         </defs>
       </svg>

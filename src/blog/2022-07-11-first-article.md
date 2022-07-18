@@ -1,18 +1,48 @@
 ---
-title: My First Article
+title: Getting started with Web Accessibility
 author: Hasmat Ali
 tags: featured
-image: /images/coding-man.png
-imageAlt: This is a test
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad distinctio aliquam?
+date: 2022-07-11
+image: /images/accessibility.jpg
+imageAlt: web accessibility
+description: Accessibility in web development is really an important concept but it seems really to be a big topic and becomes ..
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel. Donec ultrices tincidunt arcu non sodales. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Pretium quam vulputate dignissim suspendisse in est. Lobortis mattis aliquam faucibus purus in massa tempor nec. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Vulputate eu scelerisque felis imperdiet proin. Nisl nisi scelerisque eu ultrices.
+Accessibility in web development is really an important concept but it seems really to be a big topic and becomes little bit harder to get into when you are first into it. Just think about people who are visually impaired like color blindness, screen readers and people who uses keyboards only.
 
-Enim nulla aliquet porttitor lacus luctus accumsan. Vulputate mi sit amet mauris commodo quis. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Placerat orci nulla pellentesque dignissim. Consequat mauris nunc congue nisi. Nec nam aliquam sem et tortor consequat. Consequat semper viverra nam libero justo laoreet sit amet. Id interdum velit laoreet id donec. Turpis in eu mi bibendum neque. Tincidunt vitae semper quis lectus. Suscipit adipiscing bibendum est ultricies integer quis auctor. Posuere urna nec tincidunt praesent semper. Sagittis id consectetur purus ut faucibus pulvinar elementum. Diam maecenas ultricies mi eget mauris. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Dui sapien eget mi proin sed.
+In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 million have low vision."
 
-In iaculis nunc sed augue lacus. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Consectetur adipiscing elit ut aliquam. Tortor consequat id porta nibh venenatis cras sed. Integer enim neque volutpat ac tincidunt. Pellentesque pulvinar pellentesque habitant morbi. Ut enim blandit volutpat maecenas. Risus quis varius quam quisque id. Turpis tincidunt id aliquet risus. Congue eu consequat ac felis donec.
+<strong>Best practices to solve this problem are listed down below:</strong>
 
-Aliquam vestibulum morbi blandit cursus risus at. Malesuada fames ac turpis egestas sed tempus. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Enim diam vulputate ut pharetra sit amet aliquam. Est ante in nibh mauris cursus mattis. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Nec ultrices dui sapien eget mi proin sed libero enim. Sed sed risus pretium quam vulputate. Sit amet luctus venenatis lectus magna.
+<ul class="article-list" role="list">
+    <li>Always use semantic HTML because it is designed for screen readers.</li>
+    <li>Add alternative text in alt tags while using images.</li>
+    <li>Use subtitles and closed captions in your videos and while using podcast, transcripts are important.</li>
+    <li>Don’t make your text too much dense. Appropriate padding around button is highly encouraged. Make it bigger enough.</li>
+    <li>Auto play videos and websites with loud music must be turned off.</li>
+    <li>Animations can be really harmful to some people. So avoid using animations because it causes nausea and headache.</li>
+</ul>
 
-Mauris nunc congue nisi vitae suscipit tellus mauris. Vitae et leo duis ut. Arcu cursus euismod quis viverra nibh. Amet mauris commodo quis imperdiet. Condimentum lacinia quis vel eros donec. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Faucibus nisl tincidunt eget nullam. Cursus metus aliquam eleifend mi in nulla. Ut placerat orci nulla pellentesque dignissim enim sit amet. Lobortis feugiat vivamus at augue eget arcu dictum. Nunc faucibus a pellentesque sit amet porttitor. Quis varius quam quisque id diam vel quam elementum pulvinar.
+<strong>What if you didn’t use semantic html?</strong>
+
+This problem can be solved using ARIA labels. ARIA stands for Accessible Reach Internet Application. It is basically a set of rules which can make non semantic elements to semantic elements. For example, you might have used div for your buttons. So in that case you can use aria-label. To understand this more, click the link below below.
+
+Resource: <a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank">Aria Label</a>
+
+<strong>What if you have used a lot of animations in your website?</strong>
+
+This problem can be solved using prefers-reduced-motion. The user of your website has full control to avoid animation in your website. How this works is, every operating system have reduced motion option in your display settings. If it is checked, you can simply add prefers-reduced-motion in your media query as below.
+
+@media (prefers-reduced-motion: reduce) {
+.wordArtRotation,
+.ranbowWave,
+.textFadeIn {
+animation: none;
+}
+}
+Resource: <a href="https://www.tatianamac.com/" target="_blank">Prefers-Reduced-Motion</a>
+
+Other resources which will help you understand in detail about the accessibility of the website are:
+
+<a href="https://happiful.com/what-is-the-spoon-theory/" target="_blank">Spoon Theory</a> |
+<a href="https://www.a11yproject.com" target="_blank">A11y Project</a>
