@@ -147,9 +147,9 @@ h2 {
   place-items: center;
 }
 
-.box-shadow {
+/* .box-shadow {
   box-shadow: 0px -2px 13px 2px rgba(0, 0, 0, 0.25);
-}
+} */
 
 .first-rect .first {
   transform: rotate(45deg) translate(4px, -1px);
@@ -172,6 +172,10 @@ h2 {
 }
 
 /* Header */
+.header {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 599px) {
   .nav {
     position: fixed;
@@ -260,6 +264,7 @@ h2 {
   color: var(--clr-light);
   margin-bottom: 1.0625rem;
   text-transform: uppercase;
+  padding-left: 5px;
 }
 
 .description__body {
@@ -346,7 +351,7 @@ h2 {
     position: relative;
     left: -0.6em;
     text-align: right;
-    padding-right: 3.8rem;
+    padding-right: 6.8rem;
     margin-bottom: -1.5rem;
   }
 
